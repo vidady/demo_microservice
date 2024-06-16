@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
+        http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd">
+
+
+    <changeSet  id="1"  author="vivek">
+        <createTable tableName="account">
+            <column name="id" type="INTEGER">
+                <constraints nullable="false" primaryKey="true" unique="true" />
+            </column>
+            <column name="name" type="VARCHAR(255)" />
+        </createTable>
+    </changeSet>
+
+    <changeSet id="2" author="vivek">
+        <createTable tableName="department">
+            <column name="id" type="int">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="dept" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="emp_id" type="int">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="3" author="Vivek">
+        <createTable tableName="cloud_vendor_info">
+            <column name="vendor_Id" type="varchar(255)">
+                <constraints primaryKey="true" />
+            </column>
+            <column name="vendor_Name" type="varchar(255)"/>
+            <column name="vendor_Address" type="varchar(255)"/>
+            <column name="vendor_Phone_Number" type="varchar(255)"/>
+        </createTable>
+    </changeSet>
+
+
+</databaseChangeLog>
